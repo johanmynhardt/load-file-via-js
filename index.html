@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>Lorem Ipsum</title>
+</head>
+<body>
+  <textarea data-src="lorem-ipsum.txt"></textarea>
+
+  <script>
+    window.addEventListener('load', e => {
+      let textarea = document.querySelector('textarea');
+      
+      console.info('loading lorem ipsum...');
+      fetch(textarea.dataset.src)
+        .then(r => r.text())
+        .then(t => { textarea.value = t; })
+        .catch(e => console.error(e));;
+    });
+  </script>
+</body>
+</html>
