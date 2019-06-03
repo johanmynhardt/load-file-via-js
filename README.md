@@ -22,5 +22,5 @@ Open browser
 ====
 
 ```
-~/example $ open https://<ip-on-local-network>:443
+~/example $ open https://<ip-on-local-network>:4443
 ```
